@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1723645930 source:/home/haibaom/Raul/pbinfo/interclasari/main.cpp
+	<iostream>
+	<algorithm>
+
