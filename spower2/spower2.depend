@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1723712828 source:/home/haibaom/Raul/pbinfo/spower2/main.cpp
+	<fstream>
+	<algorithm>
+
