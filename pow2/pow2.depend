@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1724171129 source:/home/haibaom/Raul/pbinfo/pow2/main.cpp
+	<iostream>
+	<algorithm>
+
