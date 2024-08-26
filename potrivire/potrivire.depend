@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1724650279 source:/home/haibaom/Raul/pbinfo/potrivire/main.cpp
+	<fstream>
+	<string.h>
+
