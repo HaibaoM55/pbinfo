@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1725427370 source:/home/haibaom/Raul/pbinfo/nrmaxinterv/main.cpp
+	<fstream>
+	<algorithm>
+
