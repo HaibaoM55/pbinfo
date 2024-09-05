@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1725522537 source:/home/haibaom/Raul/pbinfo/sezonullamacrima/main.cpp
+	<iostream>
+	<algorithm>
+
