@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1725691837 source:/home/haibaom/Raul/pbinfo/perechiab/main.cpp
+	<iostream>
+	<algorithm>
+
