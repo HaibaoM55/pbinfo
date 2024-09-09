@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1725897569 source:/home/haibaom/Raul/pbinfo/kdivnn/main.cpp
+	<iostream>
+	<math.h>
+
