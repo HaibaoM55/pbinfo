@@ -2,38 +2,21 @@
 #include <math.h>
 using namespace std;
 int n, k;
-int f[20], e[20], fx[20], ex[20];
+int f[20], e[20], fx[20];
 int nf;
-int nrcifre(int f1[], int e1[], int p){
-    double s = 0;
-    for(int i = 1; i <= p; i++){
-        s += e1[i]*log10(f1[i]);
-    }
-    return floor(s)+1;
-}
-long long val(int f[], int e[], int p){
-    long long s = 1;
-    for(int i = 1; i <= p; i++){
-        for(int j = 1; j <= e[i]; j++){
-            s *= f[i];
-        }
-    }
-    return s;
-}
+long long w;
 long long vmax = 1;
-void bk(int p){
+void bk(int p, long long q){
     if(p <= nf){
-        long long v = val(fx, ex, p-1);
-        if(v > vmax){
-            vmax = v;
-        }
         for(int i = 1; i <= nf; i++){
             if(f[i] > fx[p-1]){
                 fx[p] = f[i];
+                long long r=q;
                 for(int j = 1; j <= e[i]; j++){
-                    ex[p] = j;
-                    if(nrcifre(fx, ex, p) <= k){
-                        bk(p+1);
+                    r=r*f[i];
+                    if(r<=w){
+                        if(r>vmax)vmax=r;
+                        bk(p+1,r);
                     }else{
                         break;
                     }
@@ -45,6 +28,12 @@ void bk(int p){
 int main()
 {
     cin >> n >> k;
+    w=1;
+    for(int i=1;i<=k;i++){
+        w=w*10;
+    }
+    w--;
+    ///w=10^k-1
     nf = 0;
     int x=n;
     int d=2;
@@ -66,11 +55,8 @@ int main()
         f[nf] = x;
         e[nf] = n;
     }
-    for(int i = 1; i <= nf; i++){
-        cout << f[i] << ' ' << e[i] << endl;
-    }
     vmax = 1;
-    bk(1);
+    bk(1,1);
     cout << vmax;
     return 0;
 }
