@@ -41,6 +41,8 @@ void bk(int k, int vm){
 }
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     cin >> n >> m;
     if(n % m != 0){
         cout << "IMPOSIBIL";

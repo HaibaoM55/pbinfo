@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1726060813 source:/home/haibaom/Raul/pbinfo/hard_prime/main.cpp
+	<fstream>
+	<algorithm>
+
