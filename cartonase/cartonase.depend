@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1726835385 source:/home/haibaom/Raul/pbinfo/cartonase/main.cpp
+	<iostream>
+	<algorithm>
+
