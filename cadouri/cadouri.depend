@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1727107921 source:/home/haibaom/Raul/pbinfo/cadouri/main.cpp
+	<fstream>
+	<string.h>
+	<algorithm>
+

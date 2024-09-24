@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1727190664 source:/home/haibaom/Raul/pbinfo/dim_maxim_binar/main.cpp
+	<iostream>
+	<string.h>
+
