@@ -32,6 +32,7 @@ int main()
         }
         p = strtok(0, " ");
     }
+    nrn = n;
     bool ok = false;
     for(int i = 1; i <= nrn; i++){
         if(v[i].tip == 'N'){
