@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1727501668 source:/home/haibaom/Raul/pbinfo/stringpushtop/main.cpp
+	<iostream>
+	<string.h>
+
