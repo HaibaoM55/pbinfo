@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1727591792 source:/home/haibaom/Raul/pbinfo/rime/main.cpp
+	<fstream>
+	<algorithm>
+	<string.h>
+
