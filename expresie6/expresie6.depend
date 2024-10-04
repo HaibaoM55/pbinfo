@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1728055220 source:/home/haibaom/Raul/pbinfo/expresie6/main.cpp
+	<iostream>
+	<string.h>
+	<climits>
+
