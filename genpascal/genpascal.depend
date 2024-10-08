@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1728411143 source:/home/haibaom/Raul/pbinfo/genpascal/main.cpp
+	<fstream>
+	<string.h>
+
