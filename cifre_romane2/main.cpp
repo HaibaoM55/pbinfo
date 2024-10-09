@@ -4,9 +4,13 @@ using namespace std;
 ifstream fin("cifre_romane2.in");
 ofstream fout("cifre_romane2.out");
 int a, c1;
-char b[13][4] = {"I","V","X","L","C","D","M","(V)","(X)","(L)","(C)","(D)","(M)"};
-int c[13] = {1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
-void cifre_romane(int n){
+char b[20][4] = {"I","V","X","L","C","D","M","(V)","(X)","(L)","(C)","(D)","(M)"};
+int c[20] = {1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000, 100000, 500000, 1000000};
+int vp[1003];
+int z = 0;
+char bc[1004][4];
+int nbc =0;
+void cifre_romane(int n, bool scrie){
     if(n == 0){
         return;
     }
@@ -26,128 +30,108 @@ void cifre_romane(int n){
     }
     if(1 <= p && p <= 3){
         for(int i = 1; i <= p; i++){
-            fout << b[poz];
+            nbc++;
+            strcpy(bc[nbc], b[poz]);
+            if(scrie){
+                fout << b[poz];
+            }
         }
     }else if(p == 4){
-        fout << b[poz] << b[poz+1];
+        nbc++;
+        strcpy(bc[nbc], b[poz]);
+        nbc++;
+        strcpy(bc[nbc], b[poz+1]);
+        if(scrie){
+            fout << b[poz] << b[poz+1];
+        }
     }else if(p == 5){
-        fout << b[poz+1];
+        nbc++;
+        strcpy(bc[nbc], b[poz+1]);
+        if(scrie){
+            fout << b[poz+1];
+        }
     }else if(6 <= p && p <= 8){
-        fout << b[poz+1];
+        nbc++;
+        strcpy(bc[nbc], b[poz+1]);
+        if(scrie){
+            fout << b[poz+1];
+        }
         for(int i = 1; i <= p-5; i++){
-            fout << b[poz];
+            nbc++;
+            strcpy(bc[nbc], b[poz]);
+            if(scrie){
+                fout << b[poz];
+            }
         }
     }else{
-        fout << b[poz] << b[poz+2];
+        nbc++;
+        strcpy(bc[nbc], b[poz]);
+        nbc++;
+        strcpy(bc[nbc], b[poz+2]);
+        if(scrie){
+            fout << b[poz] << b[poz+2];
+        }
     }
-    cifre_romane(n-y);
+    cifre_romane(n-y, scrie);
 }
 int numar = 0;
 int n;
-void cifre_arabe(int x[], int k){
-    if(x[0] == 0){
-        return;
-    }
-    if(x[0] == '('){
-        int poz1, poz2;
-        for(int i = 7; i <= 12; i++){
-            if(x[1] == b[i][1]){
-                poz1 = i;
-                break;
-            }
-        }
-        if(x[3] == '('){
-            for(int i = 7; i <= 12; i++){
-                if(x[4] == b[i][1]){
-                    poz2 = i;
-                    break;
-                }
-            }
-            if(poz2-poz1 == 1 && poz1 % 2 == 0){
-                numar = numar+c[poz1]*4;
-                cifre_arabe(x+6);
-            }else if(poz2-poz1 == 2 && poz1 % 2 == 0){
-                numar = numar+c[poz1]*9;
-                cifre_arabe(x+6);
-            }else if(poz1==poz2){
-                int poz3;
-                if(x[6] == '('){
-                    for(int i = 7; i <= 12; i++){
-                        if(x[7] == b[i][1]){
-                            poz3 = i;
-                            break;
-                        }
-                    }
-                    if(poz3 == poz1){
-                        numar += c[poz1]*3;
-                        cifre_arabe(x+9);
-                    }else{
-                        numar += c[poz1]*2;
-                        cifre_arabe(x+6);
-                    }
-                }
-            }else{
-                numar += c[poz1];
-                cifre_arabe(x+3);
-            }
-        }else{
-            if(x[1] == 'V'){
-                if(x[3] == 'M'){
-                    numar += 4000;
-                    cifre_arabe(x+4);
-                }
-            }else if(x[1] == 'X'){
-                if(x[3] == 'M'){
-                    numar += 9000;
-                    cifre_arabe(x+4);
-                }
-            }else{
-                numar += c[poz1];
-                cifre_arabe(x+3);
-            }
-        }
-    }else{
-        for(int i = 0; i <= 6; i++){
-            if(x[0] == b[i][0]){
-                poz2 = i;
-                break;
-            }
-        }
-        if(poz2-poz1 == 1 && poz1 % 2 == 0){
-            numar = numar+c[poz1]*4;
-            cifre_arabe(x+2);
-        }else if(poz2-poz1 == 2 && poz1 % 2 == 0){
-            numar = numar+c[poz1]*9;
-            cifre_arabe(x+2);
-        }else if(poz1==poz2){
-            int poz3;
-            if(x[2] != '('){
-                for(int i = 0; i <= 6; i++){
-                    if(x[2] == b[i][0]){
-                        poz3 = i;
-                        break;
-                    }
-                }
-                if(poz3 == poz1){
-                    numar += c[poz1]*3;
-                    cifre_arabe(x+3);
-                }else{
-                    numar += c[poz1]*2;
-                    cifre_arabe(x+6);
-                }
-            }
-        }else{
-            numar += c[poz1];
-            cifre_arabe(x+3);
-        }
-    }
-}
 int main()
 {
     fin >> c1;
     if(c1 == 1){
         fin >> a;
-        cifre_romane(a);
+        cifre_romane(a, true);
+    }else{
+        char x[1004];
+        fin >> x;
+        int l = strlen(x);
+        for(int i = 0; i < l; i++){
+            if(x[i] == '('){
+                for(int j = 7; j <= 13; j++){
+                    if(x[i+1] == b[j][1]){
+                        z++;
+                        vp[z] = j;
+                        break;
+                    }
+                }
+                i += 2;
+            }else{
+                for(int j = 0; j <= 6; j++){
+                    if(x[i] == b[j][0]){
+                        z++;
+                        vp[z] = j;
+                        break;
+                    }
+                }
+            }
+        }
+        int s = 0;
+        int nr = 0;
+        for(int i = 1; i <= z-1; i++){
+            if(vp[i] < vp[i+1]){
+                s -= c[vp[i]];
+            }else{
+                s += c[vp[i]];
+            }
+        }
+        s += c[vp[z]];
+        cifre_romane(s, false);
+        char pvc[4004];
+        int lpvc = 0;
+        for(int i = 1; i <= nbc; i++){
+            int lg = strlen(bc[i]);
+            for(int j = 0; j < lg; j++){
+                pvc[lpvc] = bc[i][j];
+                lpvc++;
+            }
+        }
+        pvc[lpvc] = 0;
+        if(strcmp(x, pvc) == 0){
+            fout << s;
+        }else{
+            fout << "Numar invalid";
+        }
     }
     return 0;
 }
