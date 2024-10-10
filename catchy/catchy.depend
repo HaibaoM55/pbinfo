@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1728568602 source:/home/haibaom/Raul/pbinfo/catchy/main.cpp
+	<fstream>
+	<string.h>
+
