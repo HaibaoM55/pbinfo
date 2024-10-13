@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1728822819 source:/home/haibaom/Raul/pbinfo/ariepoligonregulat/main.cpp
+	<iostream>
+	<math.h>
+
