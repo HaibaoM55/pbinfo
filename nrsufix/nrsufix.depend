@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1729010585 source:/home/haibaom/Raul/pbinfo/nrsufix/main.cpp
+	<fstream>
+	<string.h>
+

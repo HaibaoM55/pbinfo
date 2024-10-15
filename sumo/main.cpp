@@ -5,8 +5,29 @@ ifstream  fin("sumo.in");
 ofstream fout("sumo.out");
 int n,nv;
 int p[100002], q[100002], v[200002], sv[200002];
+long long f[12] = {0, 1, 20, 300, 4000, 50000, 600000, 7000000, 80000000, 900000000};
+long long suma(int x){
+    int p10 = 10;
+    int nrc = 1;
+    long long s = 0;
+    while(p10 < x){
+        //noi acum vom analiza de la p10/10,..., p10-1;
+        s += (f[nrc]-f[nrc-1])*45;
+        nrc++;
+        p10 = p10*10;
+    }
+    int p = p10/10;
+    int i = 1;
+    while(i*p10 < x){
+        s += (f[nrc-1]-f[nrc-2])*i;
+        i++;
+    }
+    return s+suma(x-i*p10)+i*(x-i*p10);
+}
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    fin.tie(NULL);
     fin >> n;
     for(int i = 1; i <= n; i++){
         fin >> p[i] >> q[i];
@@ -29,7 +50,22 @@ int main()
     long long s = 0;
     int nrc=0;
     while(i<=nv){
-        ///
+        int pi, qi;
+        int stp, stq;
+        for(int j = 1; j <= 9; j++){
+            dr = 9*j*z+st-1;
+            if(st <= p && p <= dr){
+                pi = j;
+                stp = st;
+            }
+            if(st <= q && q <= dr){
+                qi = j;
+                stq = st;
+                break;
+            }
+            st = dr+1;
+            z = z*10;
+        }
         int x=j,nc=0,cif[12];
         do{
             cif[++nc]=x%10;
