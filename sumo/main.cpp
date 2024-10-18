@@ -5,9 +5,9 @@ ifstream fin("sumo.in");
 ofstream fout("sumo.out");
 int n;
 int p, q;
-int sumOfDigits(int n) {
-    int totalSum = 0;
-    int factor = 1;
+long long sumOfDigits(int n) {
+    long long totalSum = 0;
+    long long factor = 1;
     while (factor <= n) {
         int lowerNumbers = n - (n / factor) * factor;
         int currentDigit = (n / factor) % 10;
@@ -28,25 +28,66 @@ int main()
     for(int i = 1; i <= n; i++){
         fin >> p >> q;
         long long s = 0;
-        int x, y;
-        long long z = 1;
-        long long st=1, dr=9;
-        int pi, qi;
-        int stp, stq;
-        for(int j = 1; j <= 9; j++){
-            dr = 9*j*z+st-1;
-            if(st <= p && p <= dr){
-                pi = j;
-                stp = st;
-            }
-            if(st <= q && q <= dr){
-                qi = j;
-                stq = st;
-                break;
-            }
-            st = dr+1;
-            z = z*10;
+        long long x, y;
+        long long c = 0;
+        int ncif = 1;
+        long long c1 = 9;
+        long long s1 = 1;
+        while (p > c + ncif * c1) {
+            c += ncif * c1;
+            ncif++;
+            c1 *= 10;
+            s1 *= 10;
         }
+        long long i1 = (p-c-1)/ncif;
+        long long j1 = (p-c-1)%ncif;
+        c = 0;
+        ncif = 1;
+        long long c2 = 9;
+        long long s2 = 1;
+        while (q > c + ncif * c2) {
+            c += ncif * c2;
+            ncif++;
+            c2 *= 10;
+            s2 *= 10;
+        }
+        long long i2 = (q - c - 1)/ncif;
+        long long j2 = (q - c - 1)%ncif;
+        s = sumOfDigits(s2+i2-1)-sumOfDigits(s1+i1);
+        long long n1 = s1+i1;
+        int cif[12];
+        int z = 0;
+        do{
+            cif[z] = n1%10;
+            z++;
+            n1 = n1/10;
+        }while(n1 > 0);
+        int nrc = z-1;
+        int cfr[12];
+        for(int j = 0; j <= z-1; j++){
+            cfr[nrc] = cif[j];
+            nrc--;
+        }
+        for(int j = j1; j <= z-1; j++){
+            s += cfr[j];
+        }
+        int cif1[12], cfr1[12];
+        z = 0;
+        n1 = s2+i2;
+        do{
+            cif1[z] = n1%10;
+            z++;
+            n1 = n1/10;
+        }while(n1 > 0);
+        nrc = z-1;
+        for(int j = 0; j <= z-1; j++){
+            cfr1[nrc] = cif1[j];
+            nrc--;
+        }
+        for(int j = 0; j <= j2; j++){
+            s += cfr1[j];
+        }
+        fout << s << '\n';
     }
     return 0;
 }
