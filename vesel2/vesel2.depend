@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1729528624 source:/home/haibaom/Raul/pbinfo/vesel2/main.cpp
+	<iostream>
+	<string.h>
+
