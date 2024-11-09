@@ -25,6 +25,7 @@ void coada(){
             p[i][j] = false;
         }
     }
+    p[1][1] = true;
     while(st <= dr){
         for(int i = 0; i <= 3; i++){
             int i1 = c[st].i+dirx[i];
@@ -38,9 +39,11 @@ void coada(){
                             c[dr].i = i1;
                             c[dr].j = j1;
                             x[i1][j1] = x[c[st].i][c[st].j]+1;
-                            if(i1 == n && j1 == m){
-                                break;
-                            }
+                        }
+                    }else{
+                        if(p[i1][j1] == false){
+                            p[i1][j1] = true;
+                            x[i1][j1] = x[c[st].i][c[st].j]+1;
                         }
                     }
                 }
@@ -48,14 +51,8 @@ void coada(){
         }
         st++;
     }
-    for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= m; j++){
-            fout << x[i][j] << ' ';
-        }
-        fout << '\n';
-    }
 }
-void coada2(){
+void coada1(){
     st = 1;
     dr = 1;
     c[1].i = n;
@@ -66,6 +63,7 @@ void coada2(){
             p[i][j] = false;
         }
     }
+    p[n][m] = true;
     while(st <= dr){
         for(int i = 0; i <= 3; i++){
             int i1 = c[st].i+dirx[i];
@@ -78,22 +76,18 @@ void coada2(){
                             dr++;
                             c[dr].i = i1;
                             c[dr].j = j1;
-                            x1[i1][j1] = x[c[st].i][c[st].j]+1;
-                            if(i1 == n && j1 == m){
-                                break;
-                            }
+                            x1[i1][j1] = x1[c[st].i][c[st].j]+1;
+                        }
+                    }else{
+                        if(p[i1][j1] == false){
+                            p[i1][j1] = true;
+                            x1[i1][j1] = x1[c[st].i][c[st].j]+1;
                         }
                     }
                 }
             }
         }
         st++;
-    }
-    for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= m; j++){
-            fout << x1[i][j] << ' ';
-        }
-        fout << '\n';
     }
 }
 int main()
@@ -111,11 +105,22 @@ int main()
             }
         }
     }
-    x[1][1] = 1;
     coada();
-    fout << '\n';
-    coada2();
-    int d1 = x[1][1]+x1[1][1]-1;
-    fout << d1;
+    coada1();
+    int d0 = x[1][1]+x1[1][1]-1;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= m; j++){
+            if(b[i][j]){
+                if(x[i][j]+x1[i][j]-1 < d0 && x[i][j]+x1[i][j]-1 != -1){
+                    fout << 1;
+                }else{
+                    fout << 0;
+                }
+            }else{
+                fout << 0;
+            }
+        }
+        fout << '\n';
+    }
     return 0;
 }
