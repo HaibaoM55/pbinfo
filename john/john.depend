@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1731219562 source:/home/haibaom/Raul/pbinfo/john/main.cpp
+	<iostream>
+	<unordered_map>
+	<algorithm>
+
