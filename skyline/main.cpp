@@ -26,7 +26,7 @@ int main()
     for(int i = 1; i <= n; i++){
         st[i] = i;
         while(p[stv[vf]].h >= p[i].h){
-            st[i] = stv[vf];
+            st[i] = st[stv[vf]];
             vf--;
         }
         vf++;
@@ -38,7 +38,7 @@ int main()
     for(int i = n; i >= 1; i--){
         dr[i] = i;
         while(p[stv[vf]].h >= p[i].h){
-            dr[i] = stv[vf];
+            dr[i] = dr[stv[vf]];
             vf--;
         }
         vf++;
