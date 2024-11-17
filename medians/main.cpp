@@ -3,42 +3,73 @@ using namespace std;
 ifstream fin("medians.in");
 ofstream fout("medians.out");
 int n, k;
-int v[100004];
-unsigned int nr = 0;
-int stv[100004];
-int nrkv[100004];
-int z = 0;
-int ap[100004];
+long long v[100004];
+long long nr = 0;
+long long stv[100004];
+long long a[200005];
 int main()
 {
     fin >> n >> k;
+    stv[0] = 100000;
     for(int i = 1; i <= n; i++){
         fin >> v[i];
-        if(v[i] < k){
-            stv[i]++;
-        }else if(v[i] == k){
-            z++;
-            ap[z] = i;
-            nrkv[i]++;
+        if(v[i] > k){
+            stv[i]=-1;
+        }else{
+            stv[i]=1;
         }
         stv[i] = stv[i-1]+stv[i];
-        nrkv[i] = nrkv[i-1]+nrkv[i];
     }
-    int p0 = 1;
-    ap[z+1]=n+1;
+
     for(int i = 1; i <= n; i++){
-        if(ap[p0] < i){
-            p0++;
-        }
-        for(int j = ap[p0]; j <= n; j++){
-            int r = (j-i+2)/2;
-            int st = stv[j]-stv[i-1];
-            int nrk = nrkv[j]-nrkv[i-1];
-            if(st+nrk >= r && st < r){
-                nr++;
-            }
+        for(int j = stv[i]; j < 200002; j += j & -j){
+            a[j] += 1;
         }
     }
-    fout << nr;
+    long long s = 0;
+    for(int i = 1; i <= n; i++){
+        long long sm = 0;
+        for(int j = stv[i]-1; j > 0; j -= j & -j){
+            sm += a[j];
+        }
+        s = s+sm;
+        if(stv[i] < 100000){
+            s++;
+        }
+        for(int j = stv[i]; j < 200002; j += j & -j){
+            a[j] -= 1;
+        }
+    }
+    stv[0] = 100000;
+    k--;
+    for(int i = 1; i <= n; i++){
+        if(v[i] > k){
+            stv[i]=-1;
+        }else{
+            stv[i]=1;
+        }
+        stv[i] = stv[i-1]+stv[i];
+    }
+    for(int i = 1; i <= 200002; i++){
+        a[i] = 0;
+    }
+    for(int i = 1; i <= n; i++){
+        for(int j = stv[i]; j < 200002; j += j & -j){
+            a[j] += 1;
+        }
+    }
+    long long s1 = 0;
+    for(int i = 1; i <= n; i++){
+        for(int j = stv[i]-1; j > 0; j -= j & -j){
+            s1 += a[j];
+        }
+        if(stv[i] < 100000){
+            s1++;
+        }
+        for(int j = stv[i]; j < 200002; j += j & -j){
+            a[j] -= 1;
+        }
+    }
+    fout << abs(s-s1);
     return 0;
 }
