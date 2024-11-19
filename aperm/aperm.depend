@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1732038408 source:/home/haibaom/Raul/pbinfo/aperm/main.cpp
+	<fstream>
+	<algorithm>
+	<string.h>
+
