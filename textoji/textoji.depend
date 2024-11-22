@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1732290452 source:/home/haibaom/Raul/pbinfo/textoji/main.cpp
+	<fstream>
+	<string.h>
+
