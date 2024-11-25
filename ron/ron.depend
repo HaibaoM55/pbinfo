@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1732556164 source:/home/haibaom/Raul/pbinfo/ron/main.cpp
+	<fstream>
+	<math.h>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1732557612 source:/home/haibaom/Raul/pbinfo/cafea/main.cpp
+	<fstream>
+	<algorithm>
+
