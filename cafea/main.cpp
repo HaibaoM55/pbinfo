@@ -13,6 +13,11 @@ bool compara(pereche a, pereche b){
     if(a.r < b.r){
         return true;
     }
+    if(a.r == b.r){
+        if(a.grame > b.grame){
+            return true;
+        }
+    }
     return false;
 }
 int main()
@@ -35,22 +40,6 @@ int main()
         }
         i++;
     }
-    if(k > 0 && s > 0){
-        fout << 0;
-        return 0;
-    }
-    if(k > 0 && s < 0)
-    {
-        fout << 0;
-        return 0;
-    }
-    if(k == 0 && s >= 0){
-        fout << s;
-        return 0;
-    }
-    if(k == 0 && s < 0){
-        fout << 0;
-        return 0;
-    }
+    fout << max(s, 0LL);
     return 0;
 }
