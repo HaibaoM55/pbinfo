@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1732898918 source:/home/haibaom/Raul/pbinfo/stele/main.cpp
+	<fstream>
+	<string.h>
+
