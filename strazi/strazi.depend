@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1733156544 source:/home/haibaom/Raul/pbinfo/strazi/main.cpp
+	<fstream>
+	<iomanip>
+
