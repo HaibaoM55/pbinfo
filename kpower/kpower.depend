@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1734104329 source:/home/haibaom/Raul/pbinfo/kpower/main.cpp
+	<fstream>
+	<math.h>
+
