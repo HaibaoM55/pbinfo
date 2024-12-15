@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734247635 source:/home/haibaom/Raul/pbinfo/partitura/main.cpp
+	<fstream>
+	<math.h>
+	<algorithm>
+
