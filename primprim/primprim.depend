@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1734874566 source:/home/haibaom/Raul/pbinfo/primprim/main.cpp
+	<fstream>
+	<algorithm>
+
