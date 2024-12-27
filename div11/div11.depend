@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1735291237 source:/home/haibaom/Raul/pbinfo/div11/main.cpp
+	<fstream>
+	<string.h>
+
