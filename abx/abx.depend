@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1735378197 source:/home/haibaom/Raul/pbinfo/abx/main.cpp
+	<fstream>
+	<climits>
+	<math.h>
+
