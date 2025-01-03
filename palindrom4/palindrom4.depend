@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1735890632 source:/home/haibaom/Raul/pbinfo/palindrom4/main.cpp
+	<fstream>
+	<string.h>
+
