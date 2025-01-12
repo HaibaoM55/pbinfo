@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1736666350 source:/home/haibaom/Raul/pbinfo/grup/main.cpp
+	<fstream>
+	<string.h>
+
