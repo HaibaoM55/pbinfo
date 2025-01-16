@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737050032 source:/home/haibaom/Raul/pbinfo/adun/main.cpp
+	<iostream>
+	<algorithm>
+
