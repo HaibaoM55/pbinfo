@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737126795 source:/home/haibaom/Raul/pbinfo/roboti2/main.cpp
+	<fstream>
+	<algorithm>
+
