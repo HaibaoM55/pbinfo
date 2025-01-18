@@ -1,41 +1,92 @@
 #include <fstream>
+#include <math.h>
 using namespace std;
-ifstream fin("spirala2.in");
-ofstream fout("spirala2.out");
-#define MOD 100003
-int p;
-int n, k;
-int a[505][505];
+ifstream fin("spiralmatrix.in");
+ofstream fout("spiralmatrix.out");
+long long n;
 int main()
 {
-    fin >> p;
-    fin >> n >> k;
-    int z = 0;
-    for(int c = 0; c <= n/2; c++){
-        for(int j = 1; j <= n; j++){
-            if(a[c+1][j] == 0){
-                z++;
-                a[c+1][j]=z;
-            }
-        }
-        for(int i = 1; i <= n; i++){
-            if(a[i][n-c] == 0){
-                z++;
-                a[i][n-c]=z;
-            }
-        }
-        for(int j = n; j >= 2; j--){
-            if(a[n-c][j] == 0){
-                z++;
-                a[n-c][j] = z;
-            }
-        }
-        for(int i = n; i >= 2; i--){
-            if(a[i][c+1] == 0){
-                z++;
-                a[i][c+1] = z;
-            }
-        }
+    fin >> n;
+    long long z1 = n;
+    double sq2 = sqrt(2);
+    z1 = ceil(n*(2-sq2)/4);
+    long long aii = 1+4LL*(z1-1)*(n-z1+1);
+    long long k1 = n*n;
+    k1 = k1/2;
+    long long k2 = k1+n%2+1;
+    long long nre = n-2*(z1-1)-1;
+    long long z = 0;
+    int i1 = z1, j1 = z1;
+    bool ok = true;
+    if(aii+nre < k1){
+        aii = aii + nre;
+        j1 = n-z1+1;
+    }else if(ok){
+        j1 = j1+(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(aii+nre < k1){
+        aii = aii + nre;
+        i1 = n-z1+1;
+    }else if(ok){
+        i1 = i1+(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(aii+nre < k1){
+        aii = aii + nre;
+        j1 = z1;
+    }else if(ok){
+        j1 = j1-(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(ok){
+        i1 = i1-(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    i1 = z1, j1 = z1;
+    aii = 1+4LL*(z1-1)*(n-z1+1);
+    ok = true;
+    k1 = k2;
+    if(aii+nre < k1){
+        aii = aii + nre;
+        j1 = n-z1+1;
+    }else if(ok){
+        j1 = j1+(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(aii+nre < k1){
+        aii = aii + nre;
+        i1 = n-z1+1;
+    }else if(ok){
+        i1 = i1+(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(aii+nre < k1){
+        aii = aii + nre;
+        j1 = z1;
+    }else if(ok){
+        j1 = j1-(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
+    }
+    if(ok){
+        i1 = i1-(k1-aii);
+        aii = k1;
+        ok = false;
+        fout << i1 << ' ' << j1 << '\n';
     }
     return 0;
 }
