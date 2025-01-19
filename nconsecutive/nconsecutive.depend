@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737269994 source:/home/haibaom/Raul/pbinfo/nconsecutive/main.cpp
+	<fstream>
+	<math.h>
+
