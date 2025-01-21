@@ -1,0 +1,11 @@
+2
+3
+metformin:siofor 10,glibomet 30,bidiab 60,gliformin 10
+ibuprofen:nurofen 24,advil 35,         ibusinus 9
+  diclofenac : diclac 28 ,   voltaren 50, cambia 102
+5
+siofor/diclac
+gliformin/diclac
+ibusinus/siofor
+ibusinus/voltaren
+bidiab/diclac

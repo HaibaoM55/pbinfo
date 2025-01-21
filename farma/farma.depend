@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737486678 source:/home/haibaom/Raul/pbinfo/farma/main.cpp
+	<fstream>
+	<string.h>
+

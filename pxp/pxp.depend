@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737462860 source:/home/haibaom/Raul/pbinfo/pxp/main.cpp
+	<fstream>
+	<math.h>
+
