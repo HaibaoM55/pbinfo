@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1737878920 source:/home/haibaom/Raul/pbinfo/balba/main.cpp
+	<fstream>
+	<string.h>
+
