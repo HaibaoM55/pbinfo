@@ -8,22 +8,22 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    for(int i = 1; i <= 44733; i++){
-        pp[i] = i*i;
-    }
     cin >> q;
     for(int i = 1; i <= q; i++){
         cin >> l >> r >> a >> b;
-        int p2 = sqrt(l+b);
-        unsigned int nr = 0;
-        for(int j = p2; j <= 44733 && pp[j] <= r+b; j++){
-            if(pp[j] >= l+b){
-                unsigned int x = pp[j]-b+a;
-                unsigned int sq = sqrt(x);
-                if(sq*sq == x && x >= l+a){
-                    nr++;
+        int x = b-a;
+        int nr = 0;
+        for(int d = 1; d*d < x; d++){
+            if(x % d == 0){
+                unsigned int s = d+(b-a)/d;
+                if(s % 2 == 0){
+					long long k2 = (d+(b-a)/d)/2;
+                    long long p = k2*k2-b;
+                    if(p >= l && p <= r){
+                    	nr++;
+                    }
                 }
-            }
+           	}
         }
         cout << nr << '\n';
     }
