@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1738602620 source:/home/haibaom/Raul/pbinfo/zzid/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+
