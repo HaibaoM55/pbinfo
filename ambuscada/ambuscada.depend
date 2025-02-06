@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1738861350 source:/home/haibaom/Raul/pbinfo/ambuscada/main.cpp
+	<fstream>
+	<map>
+	<iterator>
+
