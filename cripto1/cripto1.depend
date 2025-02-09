@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1739088283 source:/home/haibaom/Raul/pbinfo/cripto1/main.cpp
+	<fstream>
+	<map>
+	<string.h>
+	<algorithm>
+
