@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1739374274 source:/home/haibaom/Raul/pbinfo/0_alt/info-oltenia testare 2025/qscmax/main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
