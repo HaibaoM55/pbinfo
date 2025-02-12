@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739369210 source:/home/haibaom/Raul/pbinfo/0_alt/info-oltenia testare 2025/rebus/main.cpp
+	<fstream>
+	<string.h>
+
