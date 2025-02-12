@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739382307 source:/home/haibaom/Raul/pbinfo/0_alt/infoarena/cocochanel/main.cpp
+	<fstream>
+	<algorithm>
+
