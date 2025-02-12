@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739367777 source:/home/haibaom/Raul/pbinfo/0_alt/info-oltenia testare 2025/mozaic/main.cpp
+	<fstream>
+	<algorithm>
+
