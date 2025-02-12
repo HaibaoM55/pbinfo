@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1739385779 source:/home/haibaom/Raul/pbinfo/0_alt/infoarena/tribute/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+
