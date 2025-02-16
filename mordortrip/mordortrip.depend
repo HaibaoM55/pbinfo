@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739691923 source:/home/haibaom/Raul/pbinfo/mordortrip/main.cpp
+	<fstream>
+	<algorithm>
+
