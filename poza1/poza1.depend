@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1739944356 source:/home/haibaom/Raul/pbinfo/poza1/main.cpp
+	<fstream>
+	<algorithm>
+
