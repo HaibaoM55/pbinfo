@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1740293073 source:/home/haibaom/Raul/pbinfo/cmmdc4/main.cpp
+	<iostream>
+	<algorithm>
+
