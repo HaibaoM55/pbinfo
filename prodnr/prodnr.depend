@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1740895722 source:/home/haibaom/Raul/pbinfo/prodnr/main.cpp
+	<fstream>
+	<string.h>
+
