@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1741025994 source:/home/haibaom/Raul/pbinfo/cifrevecine/main.cpp
+	<fstream>
+	<string.h>
+
