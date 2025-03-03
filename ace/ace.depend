@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1741022466 source:/home/haibaom/Raul/pbinfo/ace/main.cpp
+	<fstream>
+	<algorithm>
+	<math.h>
+
