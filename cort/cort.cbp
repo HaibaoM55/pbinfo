@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="cort.in" />
+		<Unit filename="cort.out" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

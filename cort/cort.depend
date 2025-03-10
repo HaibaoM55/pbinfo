@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1741626222 source:/home/haibaom/Raul/pbinfo/cort/main.cpp
+	<fstream>
+	<algorithm>
+
