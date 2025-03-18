@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1742235322 source:/home/haibaom/Raul/pbinfo/eras/main.cpp
+	<fstream>
+	<map>
+

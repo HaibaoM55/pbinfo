@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1742302641 source:/home/haibaom/Raul/pbinfo/colibri/main.cpp
+	<fstream>
+	<algorithm>
+
