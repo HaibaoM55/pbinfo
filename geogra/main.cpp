@@ -1,5 +1,4 @@
 #include <fstream>
-#include <map>
 using namespace std;
 ifstream fin("geogra.in");
 ofstream fout("geogra.out");
@@ -9,29 +8,17 @@ struct tara{
     int x, y;
     bool c[31];
 }v[100004];
-map<int, int> f;
 int b[31];
-int pt = 1;
 int main()
 {
     fin >> c;
     fin >> n >> l;
     if(c == 1){
-        for(int i = 1; i <= l; i++){
-            pt = pt*2;
-        }
         for(int i = 1; i <= n; i++){
             fin >> v[i].x >> v[i].y;
-            int p = pt;
-            int nr = 0;
             for(int j = 1; j <= l; j++){
                 fin >> v[i].c[j];
-                if(v[i].c[j]){
-                    nr = nr+p;
-                }
-                p = p/2;
             }
-            fout << nr << '\n';
         }
         fin >> q;
         for(int i = 1; i <= q; i++){
@@ -39,7 +26,24 @@ int main()
                 fin >> b[j];
             }
             int nr = 0;
-
+            for(int j = 1; j <= n; j++){
+                bool ok = true;
+                for(int z = 1; z <= l; z++){
+                    if(b[z] == -1){
+                        continue;
+                    }
+                    if(b[z] == 1 && v[j].c[z]==false){
+                        ok = false;
+                        break;
+                    }else if(b[z] == 0 && v[j].c[z]){
+                        ok = false;
+                        break;
+                    }
+                }
+                if(ok){
+                    nr++;
+                }
+            }
             fout << nr << '\n';
         }
     }

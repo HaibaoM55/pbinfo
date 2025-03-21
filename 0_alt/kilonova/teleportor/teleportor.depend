@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1742481901 source:/home/haibaom/Raul/pbinfo/teleportor/main.cpp
+	<fstream>
+	<map>
+
+1742501699 source:/home/haibaom/Raul/pbinfo/0_alt/kilonova/teleportor/main.cpp
+	<fstream>
+	<map>
+
