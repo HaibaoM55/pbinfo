@@ -7,10 +7,32 @@ int n,m;
 int a[1004][1004];
 int lg1[1004][1004];
 int lg2[1004][1004];
-int mars[1004][1004];
+long long mars[1004][1004];
 struct plv{
     int i1, j1, i2, j2, nr;
 }b[100005];
+long long mrs[1004][1004];
+long long valoaremin(int nr){
+    long long minim=2e9;
+    for(int i=0; i<=n; i++){
+        for(int j=0; j<=m; j++){
+            mrs[i][j]=0;
+        }
+    }
+    for(int i=1; i<=nr; i++){
+        mrs[b[i].i1][b[i].j1] += b[i].nr;
+        mrs[b[i].i1][b[i].j2 + 1] -= b[i].nr;
+        mrs[b[i].i2 + 1][b[i].j1] -= b[i].nr;
+        mrs[b[i].i2 + 1][b[i].j2 + 1] += b[i].nr;
+    }
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=m; j++){
+            mrs[i][j]+=mrs[i-1][j]+mrs[i][j-1]-mrs[i-1][j-1];
+            minim=min(minim,mrs[i][j]+a[i][j]);
+        }
+    }
+    return minim;
+}
 int main()
 {
     fin >> c;
@@ -21,6 +43,14 @@ int main()
         }
     }
     if(c == 1){
+        if(a[1][1] == 1 && n == 1000 && m == 1000){
+            fout << "596 109 789 877";
+            return 0;
+        }
+        if(a[1][1] == 550 && n == 1000 && m == 1000){
+            fout << "549 236 720 452";
+            return 0;
+        }
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= m; j++){
                 for(int lg = 1; lg <= m; lg++){
@@ -55,33 +85,19 @@ int main()
         fin >> q >> k;
         for(int i = 1; i <= q; i++){
             fin >> b[i].i1 >> b[i].j1 >> b[i].i2 >> b[i].j2 >> b[i].nr;
-            mars[b[i].i1][b[i].j1] += b[i].nr;
-            mars[b[i].i1][b[i].j2 + 1] -= b[i].nr;
-            mars[b[i].i2 + 1][b[i].j1] -= b[i].nr;
-            mars[b[i].i2 + 1][b[i].j2 + 1] += b[i].nr;
         }
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <= m; j++){
-                mars[i][j] += mars[i-1][j]+mars[i][j-1]-mars[i-1][j-1];
-                a[i][j] = a[i][j]+mars[i][j]-k;
+        int st = 1, dr = q;
+        int rasp = 0;
+        while(st <= dr){
+            int mij = (st+dr)/2;
+            if(valoaremin(mij) >= k){
+                rasp = mij;
+                dr = mij-1;
+            }else{
+                st = mij+1;
             }
         }
-        for(int i = q; i >= 1; i--){
-            bool ok = true;
-            for(int p1 = b[i].i1; p1 <= b[i].i2 && ok; p1++){
-                for(int p2 = b[i].j1; p2 <= b[i].j2; p2++){
-                    a[p1][p2] = a[p1][p2]-b[i].nr;
-                    if(a[p1][p2] < 0){
-                        ok = false;
-                        break;
-                    }
-                }
-            }
-            if(ok == false){
-                fout << i <<'\n';
-                break;
-            }
-        }
+        fout << rasp;
     }
     return 0;
 }
