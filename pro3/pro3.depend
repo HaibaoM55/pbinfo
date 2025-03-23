@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1742735921 source:/home/haibaom/Raul/pbinfo/pro3/main.cpp
+	<fstream>
+	<algorithm>
+
