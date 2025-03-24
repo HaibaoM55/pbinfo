@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1742840307 source:/home/haibaom/Raul/pbinfo/plaja2/main.cpp
+	<algorithm>
+	<bits/stdc++.h>
+	<cassert>
+	<cstdarg>
+	<iterator>
+	<numeric>
+
