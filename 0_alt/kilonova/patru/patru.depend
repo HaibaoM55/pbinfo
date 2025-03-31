@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743356035 source:/home/haibaom/Raul/pbinfo/0_alt/kilonova/patru/main.cpp
+	<fstream>
+	<map>
+
