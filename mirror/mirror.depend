@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743603604 source:/home/haibaom/Raul/pbinfo/mirror/main.cpp
+	<fstream>
+	<math.h>
+
