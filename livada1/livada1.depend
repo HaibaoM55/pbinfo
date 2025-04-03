@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743665015 source:/home/haibaom/Raul/pbinfo/livada1/main.cpp
+	<fstream>
+	<algorithm>
+
