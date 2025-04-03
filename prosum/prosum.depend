@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1743667054 source:/home/haibaom/Raul/pbinfo/prosum/main.cpp
+	<fstream>
+	<map>
+	<algorithm>
+
