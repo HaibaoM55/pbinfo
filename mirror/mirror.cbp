@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="mirror.in" />
+		<Unit filename="mirror.out" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -7,7 +7,56 @@ int c;
 int p, k;
 long long a, b;
 int nrcif;
-int v[12];
+int f[11];
+int v[20],cif=0;
+bool ok(long long n,int lft){
+    for(int i = 0; i <= 9; i++){
+        f[i]=0;
+    }
+    do{
+        f[n%10]++;
+        n/=10;
+    }while(n > 0);
+    sort(f,f+10);
+    int z=9;
+    for(int i = 0; i <= 4; i++){
+        swap(f[i], f[z]);
+        z--;
+    }
+    for(int i=0; i<lft; i++){
+        int min1=0;
+        for(int j=1; j<10; j++){
+            if(f[j]<f[min1]){
+                min1=j;
+            }
+        }
+        f[min1]++;
+    }
+    int s=0,cnt=0;
+    while(s<k && cnt<10){
+        s=s+f[cnt];
+        cnt++;
+    }
+    if(s >= k && cnt >= p){
+        return true;
+    }else{
+        return false;
+    }
+}
+bool ok1=false;
+void sol(long long nr,int a){
+    if(ok(nr,cif-a)==0 || ok1){
+        return;
+    }
+    if(a==cif){
+        fout<<nr;
+        ok1=1;
+        return;
+    }
+    for(int i=v[a]; i<10 && ok1==0; i++){
+        sol(nr*10+i,a+1);
+    }
+}
 int main()
 {
     fin >> c;
@@ -37,82 +86,32 @@ int main()
         fout << nr;
     }else{
         fin >> k >> p >> a;
-        long long z = a;
-        int nrcif = 0;
-        int f[12] = {0,0,0,0,0,0,0,0,0,0};
+        long long ca=a,cnt=0;
         do{
-            nrcif++;
-            v[nrcif] = z%10;
-            f[z%10]++;
-            z = z/10;
-        }while(z > 0);
-        z = nrcif;
-        for(int i = 1; i <= nrcif/2; i++){
-            swap(v[i], v[z]);
-            z--;
+            ca/=10;
+            cif++;
+        }while(ca);
+        ca=a;
+        do{
+            cnt++;
+            v[cif-cnt]=a%10;
+            a/=10;
+        }while(a > 0);
+        int s=1;
+        while(ok1==0 && ca>0){
+            int c=ca%10;
+            ca/=10;
+            while(c!=9){
+                c++;
+                sol(ca*10+c,cif-s+1);
+            }
+            v[cif-s]=0;
+            s++;
         }
-        for(int i = nrcif; i >= 1; i--){
-            f[v[i]]--;
-            int fv[12];
-            for(int j = 0; j < 10; j++){
-                fv[j] =f[j];
-            }
-            for(int j = v[i]+1; j <= 9; j++){
-                for(int zz = 0; zz < 10; zz++){
-                    fv[zz] =f[zz];
-                }
-                v[i] = j;
-                fv[j]++;
-                sort(fv, fv+10);
-                z = 0;
-                for(int pl = 9; pl >= 9-p+2; pl--){
-                    z = z + fv[pl];
-                }
-                if(z < k){
-                    bool ok = true;
-                    int vect[20];
-                    for(int pl = 1; pl < i; pl++){
-                        vect[pl] = v[pl];
-                    }
-                    vect[i] = j;
-                    int fc[12];
-                    for(int pl = 0; pl <= 9; pl++){
-                        fc[pl] = f[pl];
-                    }
-                    for(int pl = i+1; pl <= nrcif; pl++){
-                        int fvm[12];
-                        bool ok1 = false;
-                        for(int kk = 0; kk <= 9; kk++){
-                            for(int xk = 0; xk <= 9; xk++){
-                                fvm[xk] = fc[xk];
-                            }
-                            fvm[j]++;
-                            fvm[kk]++;
-                            sort(fvm, fvm+10);
-                            int z1 = 0;
-                            for(int pl1 = 9; pl1 >= 9-p+2; pl1--){
-                                z1 = z1 + fvm[pl1];
-                            }
-                            if(z1 < k){
-                                vect[pl] = kk;
-                                fc[kk]++;
-                                ok1 = true;
-                                break;
-                            }
-                        }
-                        if(ok1 == false){
-                            ok = false;
-                            break;
-                        }
-                    }
-                    if(ok){
-                        for(int pl = 1; pl <= nrcif; pl++){
-                            fout << vect[pl];
-                        }
-                        return 0;
-                    }
-                }
-            }
+        if(ok1==0){
+            v[0]=1;
+            cif++;
+            sol(1,1);
         }
     }
     return 0;
