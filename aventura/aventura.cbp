@@ -32,8 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="aventura.in" />
-		<Unit filename="aventura.out" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
