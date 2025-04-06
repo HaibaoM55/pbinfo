@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1743920985 source:/home/haibaom/Raul/pbinfo/lemans/main.cpp
+	<fstream>
+	<algorithm>
+
