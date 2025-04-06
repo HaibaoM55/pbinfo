@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1743932309 source:/home/haibaom/Raul/pbinfo/densitate1/main.cpp
+	<fstream>
+	<algorithm>
+	<map>
+
