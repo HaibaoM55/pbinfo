@@ -89,6 +89,9 @@ signed main(){
         for(int j1 = 1; j1 <= m; j1++){
             for(int j2 = 1; j2 <= m; j2++){
                 int s = b[j1][0]+b[j2][0];
+                if(j1 == 153 && j2 == 155){
+                    int xokfggxplsakldkggdkasglasdglsa=1;
+                }
                 if(j1 == j2){
                     continue;
                 }else if(j2 == j1+1){
@@ -232,7 +235,7 @@ signed main(){
                             s2 += b[j2-1][p1];
                             p1++;
                         }else{
-                            if(b[j2-1][p1] < b[j2+1][p2]){
+                            if(b[j2-1][p1] <= b[j2+1][p2]){
                                 s2 += b[j2-1][p1];
                                 p1++;
                             }else{
