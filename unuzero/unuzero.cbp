@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="sstabil" />
+		<Option title="unuzero" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/sstabil" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/unuzero" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/sstabil" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/unuzero" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -33,8 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
-		<Unit filename="sstabil.in" />
-		<Unit filename="sstabil.out" />
+		<Unit filename="unuzero.in" />
+		<Unit filename="unuzero.out" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
