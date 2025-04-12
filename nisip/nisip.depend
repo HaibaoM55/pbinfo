@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1744452685 source:/home/haibaom/Raul/pbinfo/nisip/main.cpp
+	<fstream>
+	<algorithm>
+	<map>
+
