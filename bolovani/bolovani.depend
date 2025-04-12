@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1744444531 source:/home/haibaom/Raul/pbinfo/bolovani/main.cpp
+1744462761 source:/home/haibaom/Raul/pbinfo/bolovani/main.cpp
 	<fstream>
 	<algorithm>
+	<vector>
 
