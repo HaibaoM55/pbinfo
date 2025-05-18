@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1747543874 source:/home/haibaom/Raul/pbinfo/litereidentice/main.cpp
+	<iostream>
+	<string.h>
+
