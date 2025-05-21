@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1747841018 source:/home/haibaom/Raul/pbinfo/cuvinteprefixe/main.cpp
+	<iostream>
+	<string.h>
+
