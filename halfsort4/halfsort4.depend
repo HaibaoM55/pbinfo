@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1748000036 source:/home/haibaom/Raul/pbinfo/halfsort4/main.cpp
+	<fstream>
+	<algorithm>
+
