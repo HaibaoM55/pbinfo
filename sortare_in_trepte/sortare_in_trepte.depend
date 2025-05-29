@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1748536071 source:/home/haibaom/Raul/pbinfo/sortare_in_trepte/main.cpp
+	<iostream>
+	<algorithm>
+
