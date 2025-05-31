@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1748672149 source:/home/haibaom/Raul/pbinfo/secventa4/main.cpp
+	<fstream>
+	<unordered_map>
+
