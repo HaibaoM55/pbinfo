@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1748882934 source:/home/haibaom/Raul/pbinfo/palmaxx/main.cpp
+	<iostream>
+	<string.h>
+
