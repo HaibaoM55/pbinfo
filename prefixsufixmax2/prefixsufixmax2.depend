@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1749113712 source:/home/haibaom/Raul/pbinfo/prefixsufixmax2/main.cpp
+	<iostream>
+	<string.h>
+
