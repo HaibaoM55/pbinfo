@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1749275703 source:/home/haibaom/Raul/pbinfo/schimb/main.cpp
+	<fstream>
+	<string.h>
+
