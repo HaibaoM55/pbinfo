@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1749358161 source:/home/haibaom/Raul/pbinfo/cuvinte3/main.cpp
+	<fstream>
+	<string.h>
+
