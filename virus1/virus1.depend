@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1750089423 source:/home/haibaom/Raul/pbinfo/virus1/main.cpp
+	<fstream>
+	<string.h>
+
