@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1750324055 source:/home/haibaom/Raul/pbinfo/cuvinte_pare/main.cpp
+	<iostream>
+	<string.h>
+
