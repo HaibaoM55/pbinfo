@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1750406808 source:/home/haibaom/Raul/pbinfo/cuvintepalindrom/main.cpp
+	<iostream>
+	<string.h>
+	<algorithm>
+
