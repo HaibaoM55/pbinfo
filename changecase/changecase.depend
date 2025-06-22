@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1750571224 source:/home/haibaom/Raul/pbinfo/changecase/main.cpp
+	<fstream>
+	<string.h>
+
