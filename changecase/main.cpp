@@ -25,65 +25,58 @@ int main(){
         }
         fout << x;
     }else if(strcmp(tip, "TitleCase") == 0){
-        z = 0;
-        for(int i = 0; i <= l; i++){
-            if(('a' <= x[i] && x[i] <= 'z') || ('A' <= x[i] && x[i] <= 'Z')){
-                y[z] = x[i];
-                z++;
-            }else{
-                if(z > 0){
-                    if('a' <= y[0] && y[0] <= 'z'){
-                        y[0] = y[0]-'a'+'A';
-                    }
-                    for(int j = 1; j < z; j++){
-                        if('A' <= y[j] && y[j] <= 'Z'){
-                            y[j] = y[j]-'A'+'a';
-                        }
-                    }
-                    y[z] = 0;
-                    fout << y;
+        for(int i = 0; i < l; i++){
+            if(i == 0){
+                if('a' <= x[i] && x[i] <= 'z'){
+                    x[i] = x[i]-'a'+'A';
                 }
-                fout << x[i];
-                z = 0;
+            }else{
+                if(strchr(".,; ", x[i-1])){
+                    if('a' <= x[i] && x[i] <= 'z'){
+                        x[i] = x[i]-'a'+'A';
+                    }
+                }else{
+                    if('A' <= x[i] && x[i] <= 'Z'){
+                        x[i] = x[i]-'A'+'a';
+                    }
+                }
             }
         }
+        fout << x;
     }else if(strcmp(tip, "iNVERTcASE") == 0){
-        z = 0;
-        for(int i = 0; i <= l; i++){
-            if(('a' <= x[i] && x[i] <= 'z') || ('A' <= x[i] && x[i] <= 'Z')){
-                y[z] = x[i];
-                z++;
-            }else{
-                if(z > 0){
-                    if('A' <= y[0] && y[0] <= 'Z'){
-                        y[0] = y[0]-'A'+'a';
-                    }
-                    for(int j = 1; j < z; j++){
-                        if('a' <= y[j] && y[j] <= 'z'){
-                            y[j] = y[j]-'a'+'A';
-                        }
-                    }
-                    y[z] = 0;
-                    fout << y;
-                    z = 0;
+        for(int i = 0 ; i < l; i ++){
+            if(i == 0){
+                if('A' <= x[i] && x[i] <= 'Z'){
+                    x[i] = x[i]-'A'+'a';
                 }
-                fout << x[i];
+            }else{
+                if(strchr(".,; ", x[i-1])){
+                    if('A' <= x[i] && x[i] <= 'Z'){
+                        x[i] = x[i]-'A'+'a';
+                    }
+                }else{
+                    if('a' <= x[i] && x[i] <= 'z'){
+                        x[i] = x[i]-'a'+'A';
+                    }
+                }
             }
         }
+        fout << x;
     }else{
-        int i = 0;
-        for(i; i < l; i++){
-            if('a' <= x[i] && x[i] <= 'z'){
-                x[i] = x[i]-'a'+'A';
-            }
-            if(('a' <= x[i] && x[i] <= 'z') || ('A' <= x[i] && x[i] <= 'Z')){
-                i++;
-                break;
-            }
-        }
-        for(i; i < l; i++){
-            if('A' <= x[i] && x[i] <= 'Z'){
-                x[i] = x[i]-'A'+'a';
+        bool inprop = true;
+        for(int i = 0; i < l; i++){
+            if(x[i] == '.'){
+                inprop = true;
+            }else if('a' <= x[i] && x[i] <= 'z'){
+                if(inprop){
+                    x[i] = x[i]-'a'+'A';
+                }
+                inprop = false;
+            }else if('A' <= x[i] && x[i] <= 'Z'){
+                if(!inprop){
+                    x[i] = x[i]-'A'+'a';
+                }
+                inprop = false;
             }
         }
         fout << x;
