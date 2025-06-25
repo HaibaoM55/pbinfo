@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1750841379 source:/home/haibaom/Raul/pbinfo/mincifre/main.cpp
+	<fstream>
+	<string.h>
+
