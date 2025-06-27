@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1751047303 source:/home/haibaom/Raul/pbinfo/sortmatrixlincol/main.cpp
+	<iostream>
+	<algorithm>
+
