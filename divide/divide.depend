@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1751088250 source:/home/haibaom/Raul/pbinfo/divide/main.cpp
+	<iostream>
+	<algorithm>
+
