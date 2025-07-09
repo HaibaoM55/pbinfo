@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int n, x, l, h, k;
+int s[504][504];
+int main()
+{
+    cin >> n >> k >> l >> h;
+    for(int i = 1; i <= n;i++){
+        for(int j = 1; j <= n; j++){
+            cin >> x;
+            s[i][j] = s[i-1][j]+s[i][j-1]-s[i-1][j-1]+x;
+        }
+    }
+    int nr = 0;
+    for(int i = 1; i <= n-k+1; i++){
+        for(int j = 1; j <= n-k+1; j++){
+            int is=i,js=j; 
+            int ij=i+k-1,jj=j+k-1;
+            int suma = s[ij][jj] - s[is-1][jj] - s[ij][js-1] + s[is-1][js-1];
+            if(l <= suma && suma <= h){
+                nr++;
+            }
+        }
+    }
+    cout << nr;
+    return 0;
+}
