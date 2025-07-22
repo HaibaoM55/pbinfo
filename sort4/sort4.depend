@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1753180147 source:/home/raul/cod/pbinfo/sort4/main.cpp
+	<fstream>
+	<algorithm>
+	<vector>
+
