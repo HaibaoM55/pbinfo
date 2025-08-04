@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1754286084 source:/home/raul/cod/pbinfo/fpatrate/main.cpp
+	<iostream>
+	<cmath>
+
