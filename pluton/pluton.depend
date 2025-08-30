@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1756558347 source:/home/raul/cod/pbinfo/pluton/main.cpp
+	<fstream>
+	<algorithm>
+	<unordered_map>
+
