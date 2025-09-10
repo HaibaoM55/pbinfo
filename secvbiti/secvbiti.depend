@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1757505569 source:/home/raul/cod/pbinfo/secvbiti/main.cpp
+	<iostream>
+	<string.h>
+	<unordered_map>
+
