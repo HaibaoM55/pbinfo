@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1758351266 source:/home/raul/cod/pbinfo/kilonova_3926_CevaCuStringuri/main.cpp
+	<iostream>
+	<vector>
+	<string.h>
+
