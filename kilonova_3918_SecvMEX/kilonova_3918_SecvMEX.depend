@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1759164872 source:/home/raul/cod/pbinfo/kilonova_3918_SecvMEX/main.cpp
+	<iostream>
+	<unordered_map>
+
