@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1759644876 source:/home/raul/cod/pbinfo/afisminime/main.cpp
+	<fstream>
+	<math.h>
+
