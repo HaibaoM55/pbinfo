@@ -1,45 +1,44 @@
 #include <fstream>
 #include <math.h>
 using namespace std;
-ifstream fin("afisminime.in");
+ifstream  fin("afisminime.in");
 ofstream fout("afisminime.out");
 int n, m, x, y;
-int v[100004];
-int minm[320];
+int a[20][100002],d[100002];
 int main(){
+    ios_base::sync_with_stdio(false);
+    fin.tie(NULL);
+
     fin >> n >> m;
-    int sq = sqrt(n);
-    for(int i = 0; i <= 319; i++){
-        minm[i] = 2e9;
+    d[0]=0;
+    d[1]=0;
+    d[2]=1;
+    for(int i=3,e=1,p=4;i<=n;i++){
+        if(i<p)d[i]=e;
+        else{
+            ///p==i
+            e++;
+            p=p*2;
+            d[i]=e;
+        }
     }
-    for(int i = 1; i <= n; i++){
-        fin >> v[i];
-        minm[i/sq] = min(minm[i/sq], v[i]);
+
+    for(int i=1;i<=n;i++){
+        fin>>a[0][i];
     }
-    for(int sixseven = 1; sixseven <= m; sixseven++){
-        fin >> x >> y;
-        int minim = 2e9;
-        int i = x;
-        while(true){
-            minim = min(minim, v[i]);
-            i++;
-            if(i % sq == 0){
-                break;
-            }
+    for(int i=1,p=1;p*2<=n;p=p*2,i++){
+        for(int j=1;j+2*p-1<=n;j++){
+            a[i][j]=min(a[i-1][j],a[i-1][j+p]);
         }
-        i = y;
-        while(true){
-            minim = min(minim, v[i]);
-            i--;
-            if(i % sq == 0){
-                break;
-            }
-        }
-        int c=y/sq-1;
-        for(i = x/sq+1; i <= c; i++){
-            minim = min(minm[i], minim);
-        }
-        fout << minim << '\n';
+    }
+    for(int i=1;i<=m;i++){
+        fin>>x>>y;
+        if(x>y)swap(x,y);
+        int dif=y-x+1;
+        int e=d[dif];
+        int p=(1<<e);
+        int vmin=min(a[e][x],a[e][y-p+1]);
+        fout<<vmin<<"\n";
     }
     return 0;
 }
