@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1762588535 source:/home/raul/cod/pbinfo/kilonova_2316_rev/main.cpp
+	<fstream>
+	<algorithm>
+
