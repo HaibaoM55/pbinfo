@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1763397861 source:/home/raul/cod/pbinfo/kilonova_2021_kiloforces/main.cpp
+	<iostream>
+	<algorithm>
+	<cmath>
+	<vector>
+
