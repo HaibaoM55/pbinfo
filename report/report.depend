@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1764244043 source:/home/raul/cod/pbinfo/report/main.cpp
+	<fstream>
+	<algorithm>
+

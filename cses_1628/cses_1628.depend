@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1764170754 source:/home/raul/cod/pbinfo/cses_1628/main.cpp
+	<iostream>
+	<unordered_map>
+
