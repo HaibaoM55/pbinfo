@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1764487582 source:/home/raul/cod/pbinfo/intersectie_siruri/main.cpp
+	<fstream>
+	<set>
+
