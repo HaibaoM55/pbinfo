@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1764572989 source:/home/raul/cod/pbinfo/pcr/main.cpp
+	<iostream>
+	<algorithm>
+	<string.h>
+
