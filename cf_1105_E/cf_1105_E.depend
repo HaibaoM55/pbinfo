@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1764316800 source:/home/raul/cod/pbinfo/cf_1105_E/main.cpp
+1764694121 source:/home/raul/cod/pbinfo/cf_1105_E/main.cpp
 	<iostream>
 	<string.h>
+	<vector>
 	<map>
 
