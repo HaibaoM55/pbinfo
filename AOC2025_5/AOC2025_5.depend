@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1764953242 source:/home/raul/cod/pbinfo/AOC2025_5/main.cpp
+	<fstream>
+	<string.h>
+	<fstream>
+	<string.h>
+	<map>
+

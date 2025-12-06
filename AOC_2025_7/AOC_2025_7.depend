@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1765085790 source:/home/raul/cod/pbinfo/AOC_2025_7/main.cpp
+	<fstream>
+	<fstream>
+	<set>
+	<map>
+
