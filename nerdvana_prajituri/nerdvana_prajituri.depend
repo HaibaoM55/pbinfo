@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1765381453 source:/home/raul/cod/pbinfo/nerdvana_prajituri/main.cpp
+	<fstream>
+	<algorithm>
+
