@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1765632873 source:/home/raul/cod/pbinfo/CNFB2025Seniori/picioroange/main.cpp
+	<fstream>
+	<algorithm>
+

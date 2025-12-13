@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1765481613 source:/home/raul/cod/pbinfo/AOC2025_11/main.cpp
+	<fstream>
+	<string.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<unordered_map>
+	<map>
+	<tuple>
+

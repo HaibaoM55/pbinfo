@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1765637806 source:/home/raul/cod/pbinfo/CNFB2025Seniori/1337/main.cpp
+	<fstream>
+	<map>
+	<algorithm>
+
