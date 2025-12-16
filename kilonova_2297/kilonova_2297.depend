@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1765808606 source:/home/raul/cod/pbinfo/kilonova_2297/main.cpp
+	<fstream>
+	<string.h>
+	<vector>
+
