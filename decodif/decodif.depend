@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1766388549 source:/home/raul/cod/pbinfo/decodif/main.cpp
+	<iostream>
+	<string.h>
+
