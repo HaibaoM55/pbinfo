@@ -1,34 +1,39 @@
 #include <iostream>
-#include <bitset>
 #include <unordered_map>
 using namespace std;
-int n;
-bitset<304> a[304];
-int v[100004];
+int n, v[100004];
+long long a[301];
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cin >> n;
     for(int i = 1; i <= 300; i++){
         int x = i;
+        long long hash_val = 0;
         for(int j = 2; j * j <= i; j++){
+            int cnt = 0;
             while(x % j == 0){
-                x = x/j;
-                a[i][j] = !a[i][j];
+                x /= j;
+                cnt++;
+            }
+            if(cnt % 2 == 1){
+                hash_val ^= (1LL * j * 1000000007LL);
             }
         }
-        if(x > 1) a[i][x] = !a[i][x];
-    }
-    long long nr = 0;
-    unordered_map<bitset<304>, int> last;
-    bitset<304> prefix;
-    last[prefix] = 0;
-    for(int i = 1; i <= n; i++){
-        prefix ^= a[v[i]];
-        if(last.count(prefix)){
-            nr += i - last[prefix];
+        if(x > 1){
+            hash_val ^= (1LL * x * 1000000007LL);
         }
-        last[prefix] = i;
+        a[i] = hash_val;
+    }
+    unordered_map<long long, int> f;
+    long long nr = 0;
+    long long curent = 0;
+    f[0] = 1;
+    for(int i = 1; i <= n; i++){
+        cin >> v[i];
+        curent ^= a[v[i]];
+        nr += f[curent];
+        f[curent]++;
     }
     cout << nr;
     return 0;
