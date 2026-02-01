@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1770049909 source:/home/raul/cod/pbinfo/kilonova_3606_mod/main.cpp
+	<fstream>
+	<map>
+

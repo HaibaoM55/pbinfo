@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1770132430 source:/home/raul/cod/pbinfo/dominant indices/main.cpp
+	<iostream>
+	<vector>
+	<map>
+

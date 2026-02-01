@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1770051941 source:/home/raul/cod/pbinfo/parimpar/main.cpp
+	<fstream>
+	<map>
+	<algorithm>
+

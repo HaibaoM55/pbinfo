@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1769932091 source:/home/raul/cod/pbinfo/kilonova_432_treasure_hunting/main.cpp
+	<iostream>
+	<vector>
+
