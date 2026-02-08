@@ -10,7 +10,7 @@ int diry[7] = {1,0};
 struct poz{
     int i, j;
 }c[1000004];
-bitset<1004*1004> a;
+vector<poz> b[1004][1004];
 void initviz(){
     for(int i = 1; i <= n; i++){
         for(int j = 1; j <= m; j++){
