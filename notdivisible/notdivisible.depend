@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1770739323 source:/home/raul/cod/pbinfo/notdivisible/main.cpp
+	<iostream>
+	<vector>
+	<unordered_set>
+
