@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1774857153 source:/home/raul/cod/pbinfo/fibopower/main.cpp
+	<fstream>
+	<map>
+

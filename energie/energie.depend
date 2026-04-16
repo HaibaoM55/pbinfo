@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1771577255 source:/home/raul/cod/pbinfo/energie/main.cpp
+	<fstream>
+

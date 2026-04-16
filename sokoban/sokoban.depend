@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1771232410 source:/home/raul/cod/pbinfo/sokoban/main.cpp
+	<fstream>
+	<map>
+

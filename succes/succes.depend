@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1775285936 source:/home/raul/cod/pbinfo/succes/main.cpp
+	<fstream>
+	<algorithm>
+	<vector>
+	<map>
+	<bitset>
+

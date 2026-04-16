@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1773484219 source:/home/raul/cod/pbinfo/changemin/main.cpp
+	<fstream>
+	<vector>
+

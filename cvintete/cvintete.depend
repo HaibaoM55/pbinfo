@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1773075302 source:/home/raul/cod/pbinfo/cvintete/main.cpp
+	<fstream>
+	<map>
+	<math.h>
+

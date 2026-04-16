@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1774280854 source:/home/raul/cod/pbinfo/termite/main.cpp
+	<fstream>
+	<vector>
+	<queue>
+	<algorithm>
+

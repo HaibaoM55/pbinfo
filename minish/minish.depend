@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1774210144 source:/home/raul/cod/pbinfo/minish/main.cpp
+	<fstream>
+	<algorithm>
+	<math.h>
+	<map>
+

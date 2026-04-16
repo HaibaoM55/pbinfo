@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1771346202 source:/home/raul/cod/pbinfo/arh/main.cpp
+	<fstream>
+	<string.h>
+

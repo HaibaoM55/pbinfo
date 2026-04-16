@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1772119818 source:/home/raul/cod/pbinfo/anagrame/main.cpp
+	<fstream>
+	<string.h>
+

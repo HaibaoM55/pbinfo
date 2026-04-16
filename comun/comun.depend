@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1773930157 source:/home/raul/cod/pbinfo/comun/main.cpp
+	<fstream>
+	<string.h>
+	<vector>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1773571874 source:/home/raul/cod/pbinfo/palat/main.cpp
+	<fstream>
+	<algorithm>
+

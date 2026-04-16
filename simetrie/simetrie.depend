@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1771667903 source:/home/raul/cod/pbinfo/simetrie/main.cpp
+	<iostream>
+	<map>
+	<vector>
+

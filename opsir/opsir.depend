@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1772275302 source:/home/raul/cod/pbinfo/opsir/main.cpp
+	<fstream>
+	<algorithm>
+

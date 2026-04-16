@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1773567059 source:/home/raul/cod/pbinfo/interes/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+

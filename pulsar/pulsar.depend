@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1771486433 source:/home/raul/cod/pbinfo/pulsar/main.cpp
+	<fstream>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1774265487 source:/home/raul/cod/pbinfo/seqstr/main.cpp
+	<fstream>
+	<vector>
+	<map>
+	<set>
+

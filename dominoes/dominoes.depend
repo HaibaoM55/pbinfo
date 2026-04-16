@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1774262295 source:/home/raul/cod/pbinfo/dominoes/main.cpp
+	<fstream>
+

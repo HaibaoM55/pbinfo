@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1773080399 source:/home/raul/cod/pbinfo/collatz/main.cpp
+	<fstream>
+
