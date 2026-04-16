@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776357217 source:/home/raul/cod/pbinfo/sumcifs/main.cpp
+	<iostream>
+	<algorithm>
+
