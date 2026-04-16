@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776358386 source:/home/raul/cod/pbinfo/sume_egale/main.cpp
+	<iostream>
+	<vector>
+
