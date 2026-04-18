@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1776530601 source:/home/raul/cod/pbinfo/interval_sortat/main.cpp
+	<iostream>
+	<string_view>
+	<string>
+	<vector>
+

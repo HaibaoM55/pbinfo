@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776531385 source:/home/raul/cod/pbinfo/ransomwaretaskforce/main.cpp
+	<iostream>
+	<cstring>
+
