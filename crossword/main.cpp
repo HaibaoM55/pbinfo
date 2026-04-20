@@ -6,6 +6,10 @@ int n, m, w;
 char a[1004][1004];
 bool vizsus[1004][1004], vizdreapta[1004][1004];
 int sus[1004][1004], dreapta[1004][1004];
+struct cuvant{
+    char s[1004];
+    int l;
+}c[204], f[204][1004];
 int main(){
     fin >> n >> m;
     for(int i = 1; i <= n; i++){
@@ -41,16 +45,32 @@ int main(){
     int z = 0;
     for(int i = 1; i <= n; i++){
         for(int j = 1; j <= m; j++){
-            if(sus[i][j]){
+            if(sus[i][j] > 1){
                 z++;
                 fout << "JOS " << i << ' ' << j << '\n';
             }
-            if(dreapta[i][j]){
+            if(dreapta[i][j] > 1){
                 z++;
                 fout << "DREAPTA " << i << ' ' << j << '\n';
             }
         }
     }
-    fout << z;
+    char x;
+    int nr = 1;
+    while(fin >> x){
+        if(x == 0){
+            break;
+        }
+        if(x == ';'){
+            nr++;
+        }else{
+            c[nr].s[c[nr].l] = x;
+            c[nr].l++;
+        }
+    }
+    nr--;
+    for(int i = 1; i <= nr; i++){
+        fout << c[nr].l << ':' << c[nr].s << '\n';
+    }
     return 0;
 }
