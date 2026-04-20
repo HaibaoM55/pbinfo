@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776710493 source:/home/raul/cod/pbinfo/ksort/main.cpp
+	<iostream>
+	<algorithm>
+
