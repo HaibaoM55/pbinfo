@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1776792314 source:/home/raul/cod/pbinfo/partitiinumar/main.cpp
+	<fstream>
+	<vector>
+
