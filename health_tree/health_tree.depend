@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1776938365 source:/home/raul/cod/pbinfo/health_tree/main.cpp
+	<iostream>
+	<map>
+	<vector>
+	<set>
+	<sstream>
+	<string>
+	<algorithm>
+
