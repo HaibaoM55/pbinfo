@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1777394858 source:/home/raul/cod/pbinfo/clasament/main.cpp
+	<fstream>
+	<random>
+	<map>
+	<set>
+
