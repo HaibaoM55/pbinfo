@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1777574110 source:/home/raul/cod/pbinfo/soarece/main.cpp
+	<fstream>
+	<map>
+
