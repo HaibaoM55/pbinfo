@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1777738685 source:/home/raul/cod/pbinfo/maxn2/main.cpp
+	<iostream>
+	<algorithm>
+	<cmath>
+
