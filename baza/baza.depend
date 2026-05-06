@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1778089341 source:/home/raul/cod/pbinfo/baza/main.cpp
+	<fstream>
+	<string>
+
