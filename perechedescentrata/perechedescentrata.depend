@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1778176061 source:/home/raul/cod/pbinfo/perechedescentrata/main.cpp
+	<iostream>
+	<string>
+	<map>
+
