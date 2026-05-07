@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1778162066 source:/home/raul/cod/pbinfo/inlocuire_cmmdc_oglindit/main.cpp
+	<iostream>
+	<algorithm>
+
