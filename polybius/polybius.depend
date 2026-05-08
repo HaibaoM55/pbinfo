@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1778254682 source:/home/raul/cod/pbinfo/polybius/main.cpp
+	<fstream>
+	<string>
+	<map>
+

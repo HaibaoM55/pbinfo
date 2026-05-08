@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1778250734 source:/home/raul/cod/pbinfo/b16rec/main.cpp
+	<iostream>
+	<string>
+
