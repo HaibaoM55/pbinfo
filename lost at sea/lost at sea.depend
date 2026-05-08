@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1778255312 source:/home/raul/cod/pbinfo/lost at sea/main.cpp
+	<vector>
+	<iostream>
+	<fstream>
+
