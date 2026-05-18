@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1779118299 source:/home/raul/cod/pbinfo/nextprime/main.cpp
+	<fstream>
+
