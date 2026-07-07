@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1783262139 source:/home/raul/cod/pbinfo/tramvaiekilo/main.cpp
+	<fstream>
+	<algorithm>
+
