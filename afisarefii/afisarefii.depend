@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1784798242 source:/home/raul/cod/pbinfo/afisarefii/main.cpp
+	<fstream>
+	<vector>
+
