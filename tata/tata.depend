@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1784885601 source:/home/raul/cod/pbinfo/tata/main.cpp
+	<iostream>
+	<vector>
+
