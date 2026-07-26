@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1785050509 source:/home/raul/cod/pbinfo/componenteconexe2/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+
