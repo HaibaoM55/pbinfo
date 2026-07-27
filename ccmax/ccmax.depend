@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1785133903 source:/home/raul/cod/pbinfo/ccmax/main.cpp
+	<fstream>
+	<vector>
+
