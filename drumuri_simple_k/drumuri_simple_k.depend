@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1785135038 source:/home/raul/cod/pbinfo/drumuri_simple_k/main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
