@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1785657585 source:/home/raul/cod/pbinfo/mall/main.cpp
+	<iostream>
+	<vector>
+
