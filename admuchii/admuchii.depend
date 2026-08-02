@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1785659440 source:/home/raul/cod/pbinfo/admuchii/main.cpp
+	<fstream>
+	<vector>
+
