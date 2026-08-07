@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1786082352 source:/home/raul/cod/pbinfo/varfuriprietene/main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
