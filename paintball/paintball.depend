@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1786258061 source:/home/raul/cod/pbinfo/paintball/main.cpp
+	<fstream>
+	<vector>
+	<queue>
+
