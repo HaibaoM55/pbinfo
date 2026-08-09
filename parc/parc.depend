@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1786259750 source:/home/raul/cod/pbinfo/parc/main.cpp
+	<fstream>
+	<vector>
+	<queue>
+
