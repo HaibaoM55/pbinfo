@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1786431608 source:/home/raul/cod/pbinfo/dmink/main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
