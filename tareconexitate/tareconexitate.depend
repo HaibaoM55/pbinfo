@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1786616939 source:/home/raul/cod/pbinfo/tareconexitate/main.cpp
+	<iostream>
+	<vector>
+
