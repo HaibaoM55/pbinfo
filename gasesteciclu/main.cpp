@@ -1,37 +1,49 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 int n, m, x, y;
 vector<int> v[104];
-int rasp[104];
-int viz[104];
-void visit(int i){
-    if(viz[i]){
-        bool incepe = false;
-        for(int k = 1; k <= rasp[0]; k++){
-            if(rasp[k] == i){
-                incepe = true;
-            }
-            if(incepe){
-                cout << rasp[k] << ' ';
-            }
+int f[104];
+bool viz[104];
+bool found = false;
+void dfs(int start){
+    stack<pair<int,int>> st;
+    st.push({start, 0});
+    viz[start] = true;
+    f[start] = -1;
+    while(!st.empty() && !found){
+        int node = st.top().first;
+        int &idx = st.top().second;
+        if(idx == (int)v[node].size()){
+            st.pop();
+            continue;
         }
-        cout << i;
-        exit(0);
-        return;
-    }
-    viz[i]++;
-    rasp[0]++;
-    rasp[rasp[0]] = i;
-    int l = v[i].size();
-    for(int k = 0; k < l; k++){
-        if(!viz[v[i][k]] || (viz[v[i][k]] && rasp[0] > 3)){
-            visit(v[i][k]);
-            rasp[0]--;
-            viz[v[i][k]]--;
+
+        int p = v[node][idx];
+        idx++;
+        if(!viz[p]){
+            viz[p] = true;
+            f[p] = node;
+            st.push({p, 0});
+        }else if(p != f[node]){
+            cout << p << ' ';
+            int cur = node;
+            stack<int> rev;
+            while(cur != p){
+                rev.push(cur);
+                cur = f[cur];
+            }
+            while(!rev.empty()){
+                cout << rev.top() << ' ';
+                rev.pop();
+            }
+            cout << p << '\n';
+            found = true;
         }
     }
 }
+
 int main(){
     cin >> n >> m;
     for(int i = 1; i <= m; i++){
@@ -40,7 +52,12 @@ int main(){
         v[y].push_back(x);
     }
     for(int i = 1; i <= n; i++){
-        visit(i);
+        f[i] = -1;
+    }
+    for(int i = 1; i <= n && !found; i++){
+        if(!viz[i]){
+            dfs(i);
+        }
     }
     return 0;
 }

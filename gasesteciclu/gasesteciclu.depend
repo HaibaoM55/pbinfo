@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1786439148 source:/home/raul/cod/pbinfo/gasesteciclu/main.cpp
+1786591953 source:/home/raul/cod/pbinfo/gasesteciclu/main.cpp
 	<iostream>
 	<vector>
+	<stack>
 
