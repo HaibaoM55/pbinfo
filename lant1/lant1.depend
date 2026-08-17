@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1786952817 source:/home/raul/cod/pbinfo/lant1/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+
