@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1787291753 source:/home/raul/cod/pbinfo/longestpath/main.cpp
+	<iostream>
+	<vector>
+
