@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1787470625 source:/home/raul/cod/pbinfo/kilonova_218_ausoara/main.cpp
+	<fstream>
+	<map>
+
