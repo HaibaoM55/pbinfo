@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1787556718 source:/home/raul/cod/pbinfo/subsecvente/main.cpp
+	<fstream>
+	<string.h>
+	<map>
+
