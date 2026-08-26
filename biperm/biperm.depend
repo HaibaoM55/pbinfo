@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1787555290 source:/home/raul/cod/pbinfo/biperm/main.cpp
+1787643295 source:/home/raul/cod/pbinfo/biperm/main.cpp
 	<fstream>
+	<vector>
 
