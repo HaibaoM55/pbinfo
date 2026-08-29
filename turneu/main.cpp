@@ -16,13 +16,14 @@ void visit(int k, int p){
         for(int i = 1; i <= n; i++){
             if(!viz[i] && f[k][i]){
                 visit(i, p+1);
+                viz[i] = false;
             }
         }
     }
 }
 int main(){
     cin >> n;
-    for(int i = 1; i <= (n*(n-1)/2); i++){
+    for(int i = 1; i <= (n*(n-1))/2; i++){
         cin >> x >> y;
         f[x][y] = true;
     }
