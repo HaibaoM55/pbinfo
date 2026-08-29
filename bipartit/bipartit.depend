@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1787984290 source:/home/raul/cod/pbinfo/bipartit/main.cpp
+	<fstream>
+	<vector>
+
