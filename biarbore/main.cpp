@@ -5,26 +5,32 @@ ofstream fout("biarbore.out");
 int x = 0, y = 0;
 int st = 0, dr=0;
 int n, rad;
-void citeste(int z){
-    fin >> x;
+int z = 0;
+void citeste(){
+    bool eRad = false;
     if(z == 0){
+        eRad = true;
+    }
+    z++;
+    fin >> x;
+    if(eRad){
         st = x;
     }
     if(x != 0){
-        citeste(z+1);
+        citeste();
     }
     fin >> y;
-    if(z == 0){
+    if(eRad){
         dr = y;
     }
     if(y != 0){
-        citeste(z+1);
+        citeste();
     }
 }
 int main(){
 
     fin >> rad;
-    citeste(0);
+    citeste();
     fout << st << ' ' << dr;
     return 0;
 }
