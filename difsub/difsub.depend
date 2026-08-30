@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788076887 source:/home/raul/cod/pbinfo/difsub/main.cpp
+	<fstream>
+	<vector>
+
