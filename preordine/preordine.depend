@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788072850 source:/home/raul/cod/pbinfo/preordine/main.cpp
+	<fstream>
+	<vector>
+
