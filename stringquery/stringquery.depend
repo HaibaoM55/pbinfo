@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788241314 source:/home/raul/cod/pbinfo/stringquery/main.cpp
+	<iostream>
+	<bitset>
+
