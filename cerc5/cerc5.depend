@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788507692 source:/home/raul/cod/pbinfo/cerc5/main.cpp
+	<iostream>
+	<math.h>
+
