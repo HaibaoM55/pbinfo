@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788509049 source:/home/raul/cod/pbinfo/fazan/main.cpp
+	<iostream>
+	<string>
+
