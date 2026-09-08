@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1788874395 source:/home/raul/cod/pbinfo/anagrame4/main.cpp
+	<iostream>
+	<string.h>
+	<algorithm>
+
