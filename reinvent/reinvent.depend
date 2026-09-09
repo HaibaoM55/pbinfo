@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1788969855 source:/home/raul/cod/pbinfo/reinvent/main.cpp
+	<fstream>
+	<vector>
+
