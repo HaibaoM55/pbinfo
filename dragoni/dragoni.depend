@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1789799170 source:/home/raul/cod/pbinfo/dragoni/main.cpp
+	<fstream>
+	<queue>
+	<vector>
+
