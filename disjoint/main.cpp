@@ -1,10 +1,8 @@
 #include <iostream>
 using namespace std;
 int n, m;
+int tip, x, y;
 int rad[100004], card[100004];
-int nrc;
-pair<int, int> p[500004];
-int rasp[500004];
 int Find(int x) {
     if (rad[x] == x) {
         return x;
@@ -23,23 +21,19 @@ int main(){
     cin >> n >> m;
     for(int i = 1; i <= n; i++){
         rad[i] = i;
-        card[i] = 1;
     }
-    nrc = n;
     for(int i = 1; i <= m; i++){
-        cin >> p[i].first >> p[i].second;
-    }
-    for(int i = m; i >= 1; i--){
-        rasp[i] = nrc;
-        int fx = Find(p[i].first);
-        int fy = Find(p[i].second);
-        if(fx != fy){
-            Union(fx, fy);
-            nrc--;
+        cin >> tip >> x >> y;
+        if(tip == 1){
+            Union(Find(x), Find(y));
+        }else{
+            if(Find(x) == Find(y)){
+                cout << "DA";
+            }else{
+                cout << "NU";
+            }
+            cout << '\n';
         }
-    }
-    for(int i = 1; i <= m; i++){
-        cout << rasp[i] << '\n';
     }
     return 0;
 }
