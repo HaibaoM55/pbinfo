@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1791010112 source:/home/raul/cod/pbinfo/arbori_nr/main.cpp
+	<fstream>
+	<vector>
+
