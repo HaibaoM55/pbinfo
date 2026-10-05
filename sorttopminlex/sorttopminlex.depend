@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1791181484 source:/home/raul/cod/pbinfo/sorttopminlex/main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
