@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1791183647 source:/home/raul/cod/pbinfo/sclmprime/main.cpp
+	<fstream>
+	<vector>
+	<algorithm>
+
