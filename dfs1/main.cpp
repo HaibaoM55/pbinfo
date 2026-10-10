@@ -60,7 +60,7 @@ int main(){
     visit(1);
     for(int i = 1; i <= n; i++){
         viz[i] = false;
-        fout << f[i] << ' ';
+        //fout << f[i] << ' ';
     }
     nr = 0;
     visit2(1);
