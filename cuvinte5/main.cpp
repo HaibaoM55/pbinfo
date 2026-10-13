@@ -20,18 +20,18 @@ int main(){
     }
     nr--;
     int p = 0;
+    int lmax = 0;
     for(int i = 1; i <= nr; i++){
-        if(strchr(vocale, cuv[i][0]) != 0 && strchr(vocale, cuv[i][cuv[i].size()-1]) != 0){
+        if(cuv[i].size() == 3){
             p++;
         }
+        lmax = max(lmax, (int)cuv[i].size());
     }
     cout << p << '\n';
-    int lmax = 0;
     for(int i = 1; i <= nr; i++){
         if(strchr(vocale, cuv[i][0]) != 0 && strchr(vocale, cuv[i][cuv[i].size()-1]) != 0){
             cout << cuv[i] << '\n';
             int l1 = cuv[i].size();
-            lmax = max(lmax, l1);
         }
     }
     cout << lmax;
