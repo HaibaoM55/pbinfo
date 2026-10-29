@@ -1,19 +1,19 @@
 #include <fstream>
 using namespace std;
-ifstream fin("exp.in");
-ofstream fout("exp.out");
+ifstream fin("expresie.in");
+ofstream fout("expresie.out");
 int n, m, x;
 int ex[30004];
-bool ciur[30004];
-int prm[30004], nrp =0;
+bool ciur[204];
+int prm[204], nrp =0;
 int main(){
     fin >> m;
     fin >> n;
-    for(int i = 2; i <= 30000; i++){
+    for(int i = 2; i <= 204; i++){
         if(ciur[i] == false){
             nrp++;
             prm[nrp] = i;
-            for(int j = i; j <= 30000/i; j++){
+            for(int j = i; j <= 204/i; j++){
                 ciur[j*i] = true;
             }
         }
