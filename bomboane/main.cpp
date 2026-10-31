@@ -1,51 +1,39 @@
-#include <iostream>
-#include <set>
-#include <vector>
-
+#include <fstream>
+#include <algorithm>
 using namespace std;
-
-void read_vector(vector<int> &v)
-{
-    int n;
-    cin >> n;
-
-    for (int i = 0; i < n; ++i) {
-        int x;
-        cin >> x;
-        v.push_back(x);
+ifstream fin("bomboane.in");
+ofstream fout("bomboane.out");
+int n, t, m;
+int s[1004], d[1004], b[1004];
+pair<int, int> v[1004];
+int main(){
+    fin >> n;
+    for(int i = 1; i <= n; i++){
+        fin >> v[i].first;
+        t += v[i].first;
+        v[i].second = i;
     }
-}
-
-multiset<int> get_unpaired_elements(vector<int> v, int target)
-{
-    multiset<int> result;
-
-    for (int &val : v) {
-        //cout << val << ' ';
-        if (result.find(target - val) != result.end()) {
-            result.erase(result.find(target-val));
-        } else {
-            result.insert(val);
+    if(t % n != 0){
+        fout << "-1";
+        return 0;
+    }
+    int p = t/n;
+    while(true){
+        sort(v+1, v+n+1);
+        if(v[1].first == v[n].first){
+            break;
         }
+        int x = min(v[n].first - p, p - v[1].first);
+        m++;
+        s[m] = v[n].second;
+        d[m] = v[1].second;
+        b[m] = x;
+        v[n].first -= x;
+        v[1].first += x;
     }
-
-    return result;
-}
-
-int main(void)
-{
-    vector<int> v;
-
-    read_vector(v);
-
-    int target;
-    cin >> target;
-
-    multiset<int> result = get_unpaired_elements(v, target);
-
-    for (auto it = result.begin(); it != result.end(); ++it) {
-        cout << *it << " ";
+    fout << m << '\n';
+    for(int i = 1; i <= m; i++){
+        fout << s[i] << ' ' << d[i] << ' ' << b[i] << '\n';
     }
-
     return 0;
 }
