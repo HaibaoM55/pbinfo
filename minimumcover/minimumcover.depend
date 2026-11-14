@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1794639125 source:/home/raul/cod/pbinfo/minimumcover/main.cpp
+	<iostream>
+	<algorithm>
+
