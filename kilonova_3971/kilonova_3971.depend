@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1794646231 source:/home/raul/cod/pbinfo/kilonova_3971/main.cpp
+	<iostream>
+	<vector>
+	<queue>
+
